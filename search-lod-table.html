@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" >
+	<title>Search ISAW Digital Publications LOD as Table</title>
+	
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+	<script type="text/javascript" language="javascript" src="//code.jquery.com/jquery-1.12.4.js"></script>
+
+
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+   
+    $('#isawpubslod').DataTable({
+        "ajax": 'isawpubslod.json',
+    });
+} );
+</script>
+</head>
+<body style="width:90%;margin:auto;margin-top:2em">
+<h1>Keyword Search of Linked Open Data in ISAW Publications</h1>
+<p>Type into the 'Search:' box to see relevant links in ISAW Publications. Try 'carthage' for links to that site. Or 'pleiades' for links to the Pleiades Gazetteer.</p>
+<table id="isawpubslod" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>ISAW Publication</th>
+                <th>Displayed Text</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>ISAW Publication</th>
+                <th>Displayed Text</th>
+                <th>URL</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
